@@ -1,0 +1,60 @@
+SELECT, FROM, WHERE, LIKE, CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, TRUNCATE, COMMIT, ROLLBACK, AND, OR, =, <>, !=, IS NULL, IS NOT NULL, (), DISTINCT, IN, NOT IN, BETWEEN, NOT BETWEEN, ALL, ANY, ORDER BY ASC/DESC, UNION, UNION ALL, INTERSECT, EXCEPT, COUNT, GROUP BY, HAVING, SUM, MAX, MIN, AVG, AS, JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, NATURAL JOIN, CROSS JOIN, ON, POSITION, LENGTH, SUBSTRING, ROUND, CEIL, FLOOR, CURRENT_DATE, INTERVAL, AGE, CAST, CASE
+
+LIKE-to turn on: % _
+DISTINCT-remove duplicated records, no duplicated column values
+IN-like WHERE but for multiple-WHERE last_name IN ('Foster', 'Elliott', 'Mitchell', 'Perry', 'Lawson')
+BETWEEN/NOT BETWEEN-when we look a value in a range date or number
+ALL-for multiple-WHERE salary > ALL (SELECT 30000 UNION SELECT 40000 UNION SELECT 50000);
+ANY-for multiple-WHERE salary = ANY (SELECT 30000 UNION SELECT 40000 UNION SELECT 50000);
+ORDER BY ASC/DESC-ORDER BY hire_date ASC, employee_id DESC;
+UNION-combines the results of two sets, and removes duplicate records
+UNION ALL-combines all results of sets and show all of them, duplicates are kept
+INTERSECT-like UNION but show only the duplicates records of sets
+EXCEPT-in the 1st set we remove the duplicated records between the 1st and the 2nd set
+COUNT-count of records 
+GROUP BY-show me these values and the count of each of these values
+HAVING-similar to WHERE, but WHERE works only at the start of a query and HAVING is for the end of the query
+SUM-the sum of all records of something-number
+MIN-find the highest of maximum value-number, data, string
+MAX-find the lowest or minimum value-number, data, string
+AVG-finds the average value of a range of values-number
+AS-rename column name
+ON-works when joining multiple
+POSITION-in a string at what number position a char is located/POSITION('@' IN email_address)
+LENGTH-length of something 
+SUBSTRING-gets a the part of a string/SUBSTRING(email_address FROM POSITION('@' IN email_address) FOR 100)
+ROUND-rounds to the nearest whole number or specified decimal places/ROUND(price, 1)/ROUND(price * 9 * 0.85, 2)
+CEIL-rounds up to nearest whole number. Short for "ceiling"/CEIL(price)
+FLOOR-rounds down to nearest whole number/FLOOR(price)
+TRUNCATE-empty the whole database//it auto commit so careful
+
+
+
+- Aliases-shorter names for tables-like init variable:  
+SELECT employee_id, first_name, last_name, e.salary//e.salary
+FROM employee e;//e
+
+- Joins-it allow up to link 2 tables together in a single query
+
+INNER JOIN(JOIN)-similar to UNION, but this is two tables, not two queries/combines the results of two sets, and removes duplicate records in 1 query instead of 2
+LEFT JOIN - combines the results of two sets/from 2 tables shows table 1 + table 2 matches and the rest from table 2 that doesn't match table 1 its removed
+RIGHT JOIN-reversed to LEFT JOIN - everything goes to the right to table 2 and the rest from table 1 its removed
+FULL JOIN-combines 2 tables into 1 entirely 
+NATURAL JOIN-2 tables joined on columns that have the same name (be cautious with this join as it can be error-prone)
+CROSS JOIN-rarely used-every record in one table is joined to every record in another table
+
+Self(JOIN) - join a table to itself(only 1 table), combine in 1 col all managers and employee/
+Joining Many Tables- with ON,
+
+- Functions: SUM, COUNT, AVG, MIN, MAX, POSITION, LENGTH, ROUND, CEIL, FLOOR
+
+--- DateTime:
+- CURRENT_DATE: gets the current date/SELECT CURRENT_DATE
+- INTERVAL: adds a specific time interval to a date value/SELECT hire_date + INTERVAL '6 months' AS review_date//adds new review_date 6 months after hire_date
+- AGE: finds the difference between two date values/SELECT AGE(CURRENT_DATE, hire_date)//gives the exact age
+
+- CASE-if/then,else//when something add to price_group the string
+CASE
+WHEN price > 100 THEN 'Over 100'
+WHEN price <= 100 THEN 'Less than or under 100'
+END price_group
