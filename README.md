@@ -1,4 +1,4 @@
-<img src="https://imgur.com/8tonERO.png" alt="Certificate"/>
+<img src="https://imgur.com/uEq24tQ.png" alt="Certificate"/>
  
 ### 📚 SoftUni-PostgreSQL-May-2024
  
