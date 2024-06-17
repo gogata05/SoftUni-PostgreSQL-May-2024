@@ -1,3 +1,25 @@
+<img src="https://imgur.com/8tonERO.png" alt="Certificate"/>
+ 
+### 📚 SoftUni-PostgreSQL-May-2024
+ 
+### 🎓 Course Link - [Here](https://softuni.bg/trainings/4536/postgresql-may-2024)
+
+Welcome to the PostgreSQL! This course will equip participants with the knowledge and skills required to work with PostgreSQL databases. Throughout this course, you will delve into various aspects of: databases,transaction,storage,data handling,relationships and more.
+ 
+#### Skills You Will Gain
+
+- Working with databases
+- Transaction Management
+- Data handling and storage
+- Aggregating data in PostgreSQL
+- Working with relationships between tables
+- It is used by procedures and functions
+
+### About the Course
+
+Databases are the standard way to use dynamic technology over time, making them an indispensable part of almost every application. The intensive database fundamentals course will introduce you to one of the most widely used database management systems (DBMS) used in the development of various information systems - PostgreSQL. The course focuses on relational models, ER diagrams (tables and relational relationships) and working with the SQL language (data extraction, selection, projection, combining aggregation, grouping, modification, deletion and insertion). Fundamental knowledge of working with functions, procedures, transactions, and triggers is provided. This course lays the foundations of working with databases, making it easier to use them in real-world applications and to understand concepts such as object-oriented model (ORM) database conversion.
+
+
 # Plans and Theory Tests
 
 ## Theory Tests
